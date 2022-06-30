@@ -1,3 +1,18 @@
+// .header{
+//     border-bottom-width: 1px;
+//     border-bottom-style: solid;
+//     border-bottom-color: $header-border-color;
+
+//     &__container{
+//         display: flex;
+//         align-items: center;
+//     }
+//     &__contacts{
+//         display: flex;
+//         margin-left: auto;
+//     }
+// }
+
 .header{
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -6,9 +21,7 @@
     &__container{
         display: flex;
         align-items: center;
-    }
-    &__contacts{
-        display: flex;
-        margin-left: auto;
+        justify-content: space-between;
+        min-width: 60px;
     }
 }
