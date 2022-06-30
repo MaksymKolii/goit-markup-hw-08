@@ -1,0 +1,37 @@
+.footer {
+    background: $main-bg-dark-color;
+    padding: 60px 0;
+    &__item{
+        font-style: normal;
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+    }
+    &__link{
+        color: $footer-link-col;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus{
+        color: $accent-color;
+        }
+    }
+    &__list--text{
+        @extend %p-text
+    }
+    &__title{
+        @extend %h3-title;
+        color: $white-color;
+        margin-bottom: 20px;
+    }
+}
+.footer__link--location{
+    color: $white-color;
+    &:hover,
+    &:focus{
+    color: $white-color;
+    }
+}
+.address-block{
+    margin-right: 70px;
+}

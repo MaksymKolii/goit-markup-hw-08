@@ -1,0 +1,984 @@
+/* цвет остовного текста color: #757575; */
+/* вторичныу цвет текста color: #212121; */
+/* color: #FFFFFF; */
+/* акцент  color: #2196F3;*/
+/* hover change #188CE8; */
+/* background: #E5E5E5; */
+/* second background lite: #F5F4FA; 
+logo color dark color: #000000;
+section background dark: #2F303A;
+*/
+:root{
+    --primary-font-family:'Roboto', sans-serif;
+    --secondary-font-family:'Raleway', sans-serif;
+    --primary-font-weight: 400;
+    --secondary-font-weight: 700;
+    --accent-color: #2196F3;
+    --btn-other-color: #188CE8;
+    --main-p-color: #757575;
+    --main-h-color:#212121;
+    --main-white-color:#FFFFFF;
+    --logo-dark-color:#000000;
+    --main-bg-lite-color:#F5F4FA;
+    --main-bg-dark-color:#2F303A;
+    --box-shadow-filter:0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    --box-shadow-team-item-box: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    --footer-link-col:rgba(255, 255, 255, 0.1);
+    --hero-btn-box-shadow:rgba(0, 0, 0, 0.15);
+    --primary-letter-spacing: 0.03em;
+    --secondary-letter-spacing: 0.06em;
+    --header-border-color: #ECECEC;
+    --background-color-hero:#C4C4C4;
+    --icons-main-color:#AFB1B8;
+    --content-border-color:#EEEEEE;
+    --bg-backdrop:rgba(0, 0, 0, 0.1);
+    --contact-form-field-border: rgba(33, 33, 33, 0.2);
+    --contact-form-field-placeholder-text-color:rgba(117, 117, 117, 0.5);
+    --subscription-form-input-border-clr:rgba(255, 255, 255, 0.3) ;
+}
+
+h1,
+h2,
+h3,
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ul,
+ol{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    list-style: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    font-family:var(--primary-font-family);
+    background-color: var(--main-white-color);
+    color: var(--main-p-color);
+}
+.visually-hidden { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    margin: -1px; 
+    border: 0; 
+    padding: 0; 
+    white-space: nowrap; 
+    clip-path: inset(100%); 
+    clip: rect(0 0 0 0); 
+    overflow: hidden; 
+    } 
+    .section{
+        padding: 94px 0;
+    }
+    .container{
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+/* ========================== HEADER================================ */
+
+.page-header{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--header-border-color);
+
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.page-header-container{
+    display: flex;
+    align-items: center;
+    /* -- Можно justify-content: space-between; если 2 флекс элемента, и убрать margin-left: auto; в header-contacts ---*/  
+}
+.navigation{
+    display: flex;
+    align-items: center;
+}
+.nav-list{
+    display: flex;
+}
+.header-contacts{
+    display: flex;
+    margin-left: auto;
+}
+.logo {
+    font-family: var(--secondary-font-family);
+    font-weight: var(--secondary-font-weight);
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--accent-color);
+    margin-right: 93px;
+    padding: 24px 0;
+}
+
+.logo-dark {
+    color: var(--logo-dark-color);
+}
+.nav-item:not(:last-child){
+    margin-right: 50px;
+}
+.header-contacts-item:not(:last-child){
+    margin-right: 50px;
+}
+
+.nav-link, 
+.header-link-phone,
+.header-link-mail{
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    align-items: center;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--main-h-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link{
+    position: relative;
+    display: block;
+}
+
+.header-link-phone,
+.header-link-mail{
+    color: var(--main-p-color);
+}
+
+.mail-icon, 
+.phone-icon{
+    fill: currentColor;
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-active{
+
+    color: var(--accent-color);
+}
+.link-active::after
+{   
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px; 
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    color: var(--accent-color); 
+} 
+
+.header-link-phone:hover, 
+.header-link-mail:hover,
+.header-link-phone:focus,
+.header-link-mail:focus
+{
+    color: var(--accent-color);
+}
+
+/* .phone-icon,
+.mail-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+.phone-icon:hover,
+.mail-icon:hover,
+.phone-icon:focus,
+.mail-icon:focus
+{
+    fill: var(--accent-color);
+}
+
+/* =================== /HEADER ================================= */
+
+/* ======================== Section MAIN ========================= */
+/* ============= HERO ================ */
+.hero {
+    height: 600px;
+    background: var(--main-bg-dark-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: var(--background-color-hero);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-main-photo.jpg");
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1600px;
+    background-size: cover;
+}
+
+.main-title {
+    width: 696px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: var(--secondary-letter-spacing);
+    text-transform: uppercase;
+    color: var(--main-white-color);
+}
+.button{
+    min-width: 200px;
+    font-family: inherit;
+    font-weight: var(--secondary-font-weight);
+    font-size: 16px;
+    line-height: 1.88;
+    cursor: pointer;
+    letter-spacing: var(--secondary-letter-spacing);
+    box-shadow: var(--hero-btn-box-shadow);
+    color: var(--main-white-color);
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    padding: 10px 32px;
+    border: 1px solid transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:hover,
+.button:focus {
+    background-color: var(--btn-other-color);
+}
+
+
+/* =========================== FEATURES ============================== */
+.feature-title{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: var(--secondary-font-weight);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: var(--primary-letter-spacing);
+    text-transform: uppercase;
+    color: var(--main-h-color);
+}
+.feature-text,
+.footer-link,
+.footer-link-location{
+    font-weight: var(--primary-font-weight);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: var(--primary-letter-spacing);
+    margin-top: 0px;
+}
+
+.feature-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+.feature-item{
+    margin: 15px;
+    flex-basis: calc((100% - 120px) / 4);
+}
+.feature-item-icon-wrapper{
+    display: flex;
+    /* content: " "; */
+    width: 270px; 
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background: var(--main-bg-lite-color);
+    border-radius: 4px;
+} 
+
+/* ==== Второй способ добавления элементов ======
+ Получается что калькулятор не правильно работает 
+ с построением через  nth-child ? 
+ если поменяем  С width: 270px; На flex-basis: calc((100%-90px) / 4); или даже 100%-120px */
+
+/* .feature-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.feature-item{
+    width: 270px;
+}
+.feature-item:not(:nth-child(4n)){
+    margin-right: 30px;
+}
+.feature-item:not(:nth-last-child(-n+4)){
+    margin-bottom: 30px;
+} */
+
+/* ==== Третий gap способ добавления элементов ====== */
+/* == НЕ РАБОТАЕТ ТОЖЕ !! если calc((100%-90px) / 4) */
+
+/* .feature-list{
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.feature-item{
+    flex-basis: calc((100%-120px) / 4);
+} */
+
+/* =========================== /FEATURES ============================== */
+
+/* ======================== WORK ======================================== */
+
+.work-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.work-item{
+    position: relative;
+    flex-basis: calc((100% - 90px) / 3);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+/* ===Также не совсем правильно работает */
+/* .work-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.work-item{
+    flex-basis: calc((100% - 90px) / 3);
+}
+ .work-item:not(:nth-child(3n)){
+    margin-right: 30px;
+}
+.work-item:not(:nth-last-child(-n+3)){
+    margin-bottom: 30px;
+} */
+
+.work-title{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height:70px ;
+    color: var(--main-white-color);
+    background: rgba(47, 48, 58, 0.8);
+    margin-bottom: 0;
+}
+
+.section-title{
+        font-weight: var(--secondary-font-weight);
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
+        letter-spacing: var(--primary-letter-spacing);
+        color: var(--main-h-color);
+        margin-bottom: 50px;
+}
+.section-work{
+    padding-top: 0;
+}
+/* ======================== /WORK ======================================== */
+
+/* ======================== TEAM ========================================== */
+.section-team{
+    background: var(--main-bg-lite-color);
+}
+/* .team-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.team-item:not(:nth-child(4n)){
+    margin-right: 30px;
+}
+.team-item:not(:nth-last-child(-n+4)){
+    margin-bottom: 30px;
+} */
+
+.team-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px
+}
+.team-item{
+    flex-basis: calc((100% - 120px) / 4);
+    margin-left: 30px;
+    margin-top: 30px;
+    background: var(--main-white-color);
+    box-shadow: var(--box-shadow-team-item-box);
+    border-radius: 0px 0px 4px 4px;
+}
+.team-item-wrapper{
+    padding: 30px 0;
+
+}
+
+.team-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--main-h-color);
+    margin-bottom: 10px;
+}
+.team-text{
+    font-weight: var(--primary-font-weight);
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    margin-bottom: 16px;
+    letter-spacing: var(--primary-letter-spacing);
+}
+.social-list{
+    display: flex;
+    justify-content: center;
+}
+.social-list-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    /* fill: var(--icons-main-color); */
+    background-color: var(--main-white-color);
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-list-item:not(:last-child){
+    margin-right: 10px;
+}
+
+.social-list-icon{
+    fill: var(--icons-main-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon
+{
+    fill: var(--main-white-color);
+}
+
+/* ======================== /TEAM ========================================== */
+/* ===== CLIENTS ===================================== */
+
+.clients-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.clients-item{
+    flex-basis: calc((100% - 180px) / 6);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.clients-item-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    box-sizing: border-box;
+    border: 1px solid var(--icons-main-color);
+    border-radius: 4px; 
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients-list-icon{
+    width: 106px;
+    height:60px;
+    fill: var(--icons-main-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+.clients-item-link:hover,
+.clients-item-link:focus
+{
+    border: 1px solid var(--accent-color);
+}
+.clients-item-link:hover .clients-list-icon,
+.clients-item-link:focus .clients-list-icon
+{
+    fill: var(--accent-color);
+    
+}
+
+
+/* ===== /CLIENTS ===================================== */
+
+/* ===================== /MAIN ====================================== */
+
+/* ============================= FOOTER ========================= */
+.page-footer {
+    background: var(--main-bg-dark-color);
+    /* padding-top: 45px;
+    padding-bottom: 75px; */
+    padding: 60px 0;
+
+}
+.logo-footer{
+    display: inline-block;
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 0%;
+}
+.footer-item{
+    font-style: normal;
+}
+.footer-item:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-link{
+    color: var(--footer-link-col);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.logo-light, 
+.footer-link-location{
+    color: var(--main-white-color)
+}
+.footer-title{
+    color: var(--main-white-color);
+    margin-bottom: 20px;
+}
+.footer-link:hover,
+.footer-link:focus{
+    color: var(--accent-color);
+}
+
+.footer-align{
+    align-items: baseline;
+    display: flex;
+}
+.footer-address-wrapper{
+    margin-right: 70px;
+}
+
+.social-list-link.social-footer{
+    fill: var(--main-white-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.social-list-link:hover,
+.social-list-link:focus
+ {
+    background-color: var(--accent-color);
+}
+
+
+.subscription-form{
+    margin-left: auto;
+}
+
+.subscription-form-input{
+    background-color: transparent;
+    width: 358px;
+    height: 50px;
+    font-family: var(--primary-font-family);
+    font-weight: var(--primary-font-weight);
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 15px 16px;
+    margin-right: 12px;
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--main-white-color);
+    border: 1px solid var(--subscription-form-input-border-clr);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+}
+
+.subscription-form-input::placeholder{
+    color: var(--footer-link-col);
+}
+.subscription-form-input-btn-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.subscription-btn{
+    display: flex;
+    align-items: center;
+    padding: 10px 28px 10px 29px;
+}
+.subscription-btn-icon{
+    fill:var(--main-white-color);
+   margin-left: 10px;
+}
+
+/* ============================= /FOOTER ========================= */
+
+/* ============================= PORTFOLIO html ====================== */
+/* ====  filter ==== */
+
+.filter-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    justify-content: center;
+    
+}
+.filter-item:not(:last-child){
+    margin-right: 8px;
+    
+}
+.filter-btn {
+    min-width: 73px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--main-h-color);
+    border: none;
+    background: var(--main-bg-lite-color);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 22px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.filter-btn:hover,
+.filter-btn:focus{
+    background-color: var(--accent-color);
+    box-shadow: var(--box-shadow-filter);
+    border-radius: 4px;
+    color: var(--main-white-color);
+}
+/* ===== /filter ====-=== */
+/* ====== Content =======*/
+
+.content-item-link{
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.content-item-link:hover,
+.content-item-link:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);  
+} 
+.content-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.content-item{
+    flex-basis: calc((100% - 90px) / 3);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.content-item-wrapper{
+    border: 1px solid var(--header-border-color);
+    border-top: none;
+    padding: 20px 24px;
+}
+.content-list-img-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.content-list-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 63px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-weight: var(--primary-font-weight);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--main-white-color);
+    background: rgba(33, 150, 243, 0.9);
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* opacity: 0;
+    visibility: hidden;
+    pointer-events: none; */
+}
+/* == Так не будет работать при фокусе! потому что фокус работает на ссылку А не на лист */
+.content-item-link:hover .content-list-overlay,
+.content-item-link:focus .content-list-overlay
+{
+    /* opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+    transform: translateY(0%);
+}
+
+
+
+
+.content-title{
+    font-weight: var(--secondary-font-weight);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--main-h-color);
+    margin-bottom: 4px;
+}
+.content-text{
+    font-weight: var(--primary-font-weight);
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--main-p-color);
+   
+}
+
+
+/* ====== /Content =======*/
+/* ============================= /PORTFOLIO html ====================== */
+
+/* ============================= BACKDROP ====================== */
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-backdrop);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.modal{
+    width: 528px;
+    height: 581px;
+    background-color: var(--main-white-color);
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal-close-btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus 
+{
+    fill: var(--btn-other-color);
+}
+
+/* ============================= /BACKDROP ====================== */
+/* ============== Modal form ================ */
+
+.contact-form{
+    display: flex;
+    flex-direction: column; 
+}
+.contact-form-field{
+    margin-bottom: 10px;
+}
+
+/* Создали специально span class= contact-form-input-wrapper который будет по р-ру контента (инпута)
+в него вкладываем наш Инпут и СВГ чтоб можно было позиционироватся от инпута(который непарный) */
+.contact-form-input-wrapper{
+    position: relative;
+    display: block;
+}
+
+.contact-form-field.last{
+    margin-bottom: 20px;
+}
+
+.contact-form-input{
+    /* чтоб стали друг под другом самый простой вар,
+    1) дать ширину 100% (высоту и т.д.) 
+    т.к.инпут строчно блочный  и он не поместится с текстом в одной строке и перенесётся!! 
+    2) можно чеоез флекс на каждый лейбл и флекс директ -колумн(много писать), 
+    3) можно инпуту дать дисплай блок и он тоже перенесётся на новую строку */
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid var(--contact-form-field-border);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-form-input:focus{
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.contact-form-input:focus + .contact-form-icon{
+    fill: var(--accent-color);
+}
+
+/* текст находящийся в label перед input*/
+.contact-form-field-key{
+    /*  чтоб можно было задать марджины делаем дисплей блоком, можно инлайн блоком */
+    display: block;
+    font-family: var(--primary-font-family);
+    font-weight: var(--primary-font-weight);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+    color: var(--main-p-color);
+
+}
+
+.contact-form-topic{
+    font-family: var(--primary-font-family);
+    font-weight: var(--secondary-font-weight);
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--main-h-color);
+    margin-bottom: 12px;
+}
+
+.contact-form-icon{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-message{
+    /* убираем строчный зазор у textarea поэтому делаем display: block; */
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: 1px solid var(--contact-form-field-border);
+    border-radius: 4px;
+    resize: none;
+    padding: 12px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-form-message:focus{
+    outline: none;
+    border-color: var(--accent-color);
+
+}
+.contact-form-message::placeholder{
+    font-family:var(--primary-font-family);
+    font-weight: var(--primary-font-weight);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: var(--contact-form-field-placeholder-text-color);
+}
+.contact-form-checkbox-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: var(--primary-font-family);
+    font-weight: var(--primary-font-weight);
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--main-p-color);
+    margin-bottom: 30px;
+    /* transition: border-color 2250ms cubic-bezier(0.4, 0, 0.2, 1), backgrouund-color 3250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+/* Checkbox */
+.contact-form-checkbox-label::before{
+    display: block;
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--logo-dark-color);
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 4px;
+}
+/* когда contact-form-checkbox выбран (:checked) то у beforа его соседа contact-form-checkbox-label  изменяется что либо! */
+.contact-form-checkbox:checked + .contact-form-checkbox-label::before{
+    background-color:var(--accent-color);
+    border-color: var(--accent-color);
+    background-image: url("../images/modal-icons/choose-mark-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 11px 8px;
+}
+
+/* т.к.нашу галочку - Before фокус не видит мы сами задаем типа фокус браузера*/
+.contact-form-checkbox:focus + .contact-form-checkbox-label::before{
+    /* border: 2px solid var(--logo-dark-color); */
+    border: 2px solid var(--accent-color);
+}
+
+
+.contact-form-checkbox-label>a{
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+/* Наша кнопка занимает ширину всего Флекс контейнера она STREICH и растягивается 
+по вспомогат оси ( у нас вся formа флекс column) но мы не хотим на всей форме менять стрейч
+1) можем задать кнопке штрину и марджин лефт райт авто
+2) мы дадим alighn-self: center;
+ */
+.contact-form-btn{
+    min-width: 200px;
+    font-family: inherit;
+    font-weight: var(--secondary-font-weight);
+    font-size: 16px;
+    line-height: 1.88;
+    cursor: pointer;
+    align-self: center;
+    letter-spacing: var(--secondary-letter-spacing);
+    box-shadow: var(--hero-btn-box-shadow);
+    color: var(--main-white-color);
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    padding: 10px 32px;
+    border: 1px solid transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* == Ховер кнопри тоже закомментир */
+
+.contact-form-btn:hover,
+.contact-form-btn:focus {
+    background-color: var(--btn-other-color);
+}
+
+
+/* ============== /Modal form ================ */

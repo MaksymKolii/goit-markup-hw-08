@@ -1,0 +1,35 @@
+@import'./utils/variables';
+@import './utils/visually-hidden';
+@import './utils/placeholders';
+@import './utils/mixines';
+
+@import'./base/common.scss';
+@import'./base/container.scss';
+@import './base/section.scss';
+
+
+@import './components/button';
+@import './components/filter-btn';
+@import './components/navigation';
+@import './components/social-list';
+@import './components/logo';
+@import './components/contacts';
+@import './components/backdrop';
+@import './components/modal-window';
+@import './components/contact-form';
+@import './components/content-title-text';
+@import './components/checkbox';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/features';
+@import './layout/work';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/filter-portfolio';
+@import './layout/content';
+@import './layout/footer';
+@import './layout/subscription-form';
+
+
+

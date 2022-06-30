@@ -1,0 +1,28 @@
+.features__title{
+    @extend %h3-title;
+    color: $heading-text-color;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.features__text{
+    @extend %p-text;
+}
+
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+.features__item{
+    margin: 15px;
+    flex-basis: calc((100% - 120px) / 4);
+}
+.features__wrapper{
+    @extend %align;
+    width: 270px; 
+    height: 120px;
+    margin-bottom: 30px;
+    background: $bg-lite-col;
+    border-radius: 4px;
+} 

@@ -1,0 +1,30 @@
+.logo{
+    font-family: $secondary-font-family;
+    font-weight: $secondary-font;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: $prim-letter-spacing;
+    color: $accent-color;
+    padding: 24px 0;
+    .logo__dark{
+        color: $logo-dark-color;
+    } 
+    .logo__light{
+        color: $white-color; 
+    }
+}
+.header__logo {
+    margin-right: 93px;
+}
+
+
+.footer__logo{
+    display: inline-block;
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 0%;
+}
+ 
+.footer-link-location{
+    color: $white-color;
+}

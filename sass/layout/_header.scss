@@ -1,0 +1,14 @@
+.header{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $header-border-color;
+
+    &__container{
+        display: flex;
+        align-items: center;
+    }
+    &__contacts{
+        display: flex;
+        margin-left: auto;
+    }
+}
