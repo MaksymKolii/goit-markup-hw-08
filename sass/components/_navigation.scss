@@ -32,7 +32,9 @@
 .nav__link--active{
     color: $accent-color;
     &::after{   
-        @include pseudo;
+        content: '';
+        display: block;
+        position: absolute;
         left: 0;
         bottom: -1px;
         width: 100%;

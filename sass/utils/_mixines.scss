@@ -4,8 +4,8 @@
     line-height: $lh/$fs ;
 }
 
-@mixin pseudo($display: block, $pos: absolute, $content: ''){
-    content: $content;
-    display: $display;
-    position: $pos;
-}
+// @mixin pseudo($display: block, $pos: absolute, $content: ''){
+//     content: $content;
+//     display: $display;
+//     position: $pos;
+// }
