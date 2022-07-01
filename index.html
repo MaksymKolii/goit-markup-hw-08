@@ -157,12 +157,27 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
             <li class="team__item">
-              <img
-                src="./images/team/ihor_demian2.jpg"
-                alt="Фотография Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source srcset="./images/team/demian-desktop.webp 1x, ./images/team/demian-desktop@2x.webp 2x"
+                media="(min-width: 1200px)">
+                <source srcset="./images/team/demian-desktop.jpg 1x, ./images/team/demian-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)"
+                />
+                <source srcset="./images/team/demian-tablet.webp 1x, ./images/team/demian-tablet@2x.webp 2x"
+                media="(min-width: 1200px)">
+                <source srcset="./images/team/demian-tablet.jpg 1x, ./images/team/demian-tablet@2x.jpg 2x"
+                media="(min-width: 768px)"
+                />
+                <source srcset="./images/team/demian-mobile.webp 1x, ./images/team/demian-mobile@2x.webp 2x"
+                media="(min-width: 1200px)">
+                <source srcset="./images/team/demian-mobile.jpg 1x, ./images/team/demian-mobile@2x.jpg 2x"
+                media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/team/demian-mobile.jpg"
+                  alt="Фотография Игорь Демьяненко"
+                />
+              </picture>
               <div class="team__wrapper">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p lang="en" class="team__text">Product Designer</p>
