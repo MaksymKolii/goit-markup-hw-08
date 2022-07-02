@@ -1,3 +1,28 @@
+// может в navigation ??
+.nav{
+    display: none;
+}
+.contacts{
+    display: none;
+}
+
+.header{
+    padding-top: 16px;
+}
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobile-menu-open-btn{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+}
+.mobile-menu-open-btn__icon{
+    fill: $logo-dark-color;
+}
 // .header{
 //     border-bottom-width: 1px;
 //     border-bottom-style: solid;

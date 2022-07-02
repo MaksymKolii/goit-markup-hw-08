@@ -203,11 +203,11 @@ body {
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: #2196F3;
-  padding: 24px 0;
+  padding: 16px 0;
 }
 .logo .logo__dark {
   color: #000000;
@@ -216,10 +216,29 @@ body {
   color: #FFFFFF;
 }
 
-.header__logo {
-  margin-right: 93px;
+@media screen and (min-width: 768px) {
+  .logo {
+    padding: 26px 0;
+  }
 }
-
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1923076923;
+    padding: 24px 0 25px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+  }
+}
 .footer__logo {
   display: inline-block;
   margin-right: 0;
@@ -412,6 +431,35 @@ body {
 .checkbox__label .checkbox__link {
   text-decoration: underline;
   color: #2196F3;
+}
+
+.nav {
+  display: none;
+}
+
+.contacts {
+  display: none;
+}
+
+.header {
+  padding-top: 16px;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-menu-open-btn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  line-height: 0;
+}
+
+.mobile-menu-open-btn__icon {
+  fill: #000000;
 }
 
 .hero {
