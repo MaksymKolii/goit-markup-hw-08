@@ -15,27 +15,27 @@
 @media screen and (min-width:768px) {
     .logo{
         padding:26px 0 ;
+    }
+    .header__logo{
+        margin-right: 88px;;
     } 
 }
+
 
 @media screen and (min-width:1200px) {
     .logo{
         @include font($fw:700,$fs:26px, $lh:31px);
         padding: 24px 0 25px 0; ;
-    } 
-}
-
-
-@media screen and (min-width:768px) {
-    .header__logo{
-        margin-right: 88px;;
-    } 
-}
-@media screen and (min-width:1200px) {
+    }
     .header__logo{
         margin-right: 93px;;
-    } 
+    }
+
 }
+
+
+
+
 
 
 // .logo{

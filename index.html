@@ -53,16 +53,16 @@
             >
           </li>
         </ul>
-        <button type='button'class="mobile-menu-open-btn">
+        <button type='button'class="mobile-menu-open-btn" data-menu-open>
           <svg class="mobile-menu-open-btn__icon" width="40" height="40">
             <use href="./images/icons.svg/sprite.svg#burger"></use>
           </svg>
         </button>
       </div>
 <!-- === Mobile menu === -->
-<div class="mobile-menu">
+<div class="mobile-menu" data-menu>
   <div class="container mobile-menu__container">
-    <button type="button" class="mobile-menu__close-btn">
+    <button type="button" class="mobile-menu__close-btn" data-menu-close>
       <svg class="mobile-menu__close-icon" width="40" height="40">
         <use href="./images/icons.svg/sprite.svg#close-icon"></use>
       </svg>
@@ -78,7 +78,7 @@
           <a class="mobile-menu-nav__link" href="#">Контакты</a>
         </li>
       </ul>
-      <div class=" mobile-menu__bottom-block">
+      <!-- <div class=" mobile-menu__bottom-block"> -->
         <ul class="mobile-menu-contacts">
           <li class="mobile-menu-contacts__item">
             <a class="mobile-menu-contacts__link mobile-menu-contacts__link--marked" href="tel:+380961111111">
@@ -95,25 +95,25 @@
         <ul class="mobile-menu-social-list">
           <li class="mobile-menu-social-list__item">
             <a href="" class="mobile-menu-social-list__link">instagramm
+              
             </a>
           </li>
           <li class="mobile-menu-social-list__item">
-            <a href="" class="mobile-menu-social-list__link">
-              Twitter
+            <a href="" class="mobile-menu-social-list__link">Twitter
             </a>
           </li>
           <li class="mobile-menu-social-list__item">
-            <a href="" class="mobile-menu-social-list__link">
-              Facebook
+            <a href="" class="mobile-menu-social-list__link">Facebook
+              
             </a>
           </li>
           <li class="mobile-menu-social-list__item">
-            <a href="" class="mobile-menu-social-list__link">
-              LinkedIn
+            <a href="" class="mobile-menu-social-list__link">LinkedIn
+
             </a>
           </li>
         </ul>
-      </div>
+      <!-- </div> -->
   </div>
 </div>
     </header>
@@ -575,7 +575,7 @@
       </section> -->
     </main>
     <!--Footer-->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container container--footer">
         <div class="address-block">
           <a href="#" class="logo footer__logo">Web<span class="logo__light">Studio</span></a>
@@ -651,7 +651,7 @@
             </div>
           </form> 
       </div>
-    </footer> -->
+    </footer> 
     <!-- ==================== BACKDROP =================== -->
     <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -723,6 +723,7 @@
         </form>
       </div>
     </div> -->
+    <script src="./js/menu.js"></script>
     <!-- <script src="./js/modal.js"></script> -->
   </body>
 </html>

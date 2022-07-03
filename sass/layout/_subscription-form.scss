@@ -1,16 +1,20 @@
 .subscription{
-    margin-left: auto;
+    // удалил для мобайла
+    // margin-left: auto;
 }
 .subscription__input{
     background-color: transparent;
-    width: 358px;
-    height: 50px;
+    // Это вставить в footer subscription__input 1200px
+    // width: 358px;
+    // height: 50px;
+    // margin-right: 12px;
+
     font-family: var(--primary-font-family);
     font-weight: $primary-font;
     font-size: 16px;
     line-height: 1.25;
     padding: 15px 16px;
-    margin-right: 12px;
+    
     letter-spacing: $prim-letter-spacing;
     color: $white-color;
     border: 1px solid $subscription-form-input-border-clr;

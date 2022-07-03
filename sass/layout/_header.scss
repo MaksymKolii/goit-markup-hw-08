@@ -1,10 +1,24 @@
 // может в navigation ??
-.nav{
-    display: none;
+// 0px-767px
+@media screen and (max-width:767px){
+    .nav{
+        display: none;
+    }
+    .contacts{
+        display: none;
+    }
+    .mobile-menu-open-btn{
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        line-height: 0;
+    }
+    .mobile-menu-open-btn__icon{
+        fill: $logo-dark-color; 
+    }
+
 }
-.contacts{
-    display: none;
-}
+
 
 .header{
     padding-top: 16px;
@@ -14,16 +28,30 @@
     align-items: center;
     justify-content: space-between;
 }
-.mobile-menu-open-btn{
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    line-height: 0;
+
+
+
+@media screen and(min-width:768px) {
+    .mobile-menu-open-btn{
+        display: none;
+    }
+    .nav{
+        display: flex;
+    }
+    .contacts{
+        display: block;
+    }
 }
-.mobile-menu-open-btn__icon{
-    fill: $logo-dark-color;
-    
+
+@media screen and(min-width:1200px) {
+    .header__contacts{
+        display: flex;
+        align-items: center;
+    }
 }
+
+
+
 // .header{
 //     border-bottom-width: 1px;
 //     border-bottom-style: solid;
