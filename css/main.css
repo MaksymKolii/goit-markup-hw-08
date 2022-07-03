@@ -1,4 +1,4 @@
-.clients .clients__link, .work__title, .features__wrapper, .checkbox__label, .social-list__link {
+.clients .clients__link, .work__title, .features__wrapper, .checkbox__label {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,41 +165,6 @@ body {
   color: #FFFFFF;
 }
 
-.social-list {
-  display: flex;
-  justify-content: center;
-}
-
-.social-list__link {
-  width: 44px;
-  height: 44px;
-  background-color: #FFFFFF;
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-list__link:hover, .social-list__link:focus {
-  background-color: #2196F3;
-}
-.social-list__link--footer {
-  fill: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.social-list__link--footer:hover, .social-list__link--footer:focus {
-  background-color: #2196F3;
-}
-
-.social-list__icon {
-  fill: #AFB1B8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-list__link:hover .social-list__icon, .social-list__link:focus .social-list__icon {
-  fill: #FFFFFF;
-}
-
-.social-list__item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -216,15 +181,6 @@ body {
   color: #FFFFFF;
 }
 
-@media screen and (min-width: 768px) {
-  .logo {
-    padding: 26px 0;
-  }
-
-  .header__logo {
-    margin-right: 88px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .logo {
     font-weight: 700;
@@ -248,9 +204,6 @@ body {
   color: #FFFFFF;
 }
 
-.contacts__item:not(:last-child) {
-  margin-bottom: 10px;
-}
 .contacts__icon {
   fill: currentColor;
   margin-right: 10px;
@@ -270,19 +223,19 @@ body {
   color: #2196F3;
 }
 
-@media screen and (min-width: 768px) {
-  .header__contacts {
-    padding-top: 21px;
-    padding-bottom: 21px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .contacts__item:not(:last-child) {
     margin-right: 50px;
+    margin-bottom: 0;
   }
   .contacts__link {
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 8px;
   }
 }
 .backdrop {
@@ -630,6 +583,11 @@ body {
     background: #2196F3;
     border-radius: 2px;
   }
+
+  .social-block {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 @media screen and (max-width: 767px) {
   .nav {
@@ -672,12 +630,14 @@ body {
 
   .contacts {
     display: block;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__contacts {
     display: flex;
     align-items: center;
+    margin-left: auto;
   }
 }
 .hero {
@@ -884,95 +844,6 @@ body {
 .footer__link--location:hover, .footer__link--location:focus {
   color: #FFFFFF;
 }
-
-@media screen and (max-width: 767px) {
-  .container--footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer__addr {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .address-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .social-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .subscription {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .subscription__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-  }
-
-  .subscription__input {
-    width: 450px;
-    height: 50px;
-    margin-bottom: 20px;
-  }
-
-  .footer__item:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-  .social-block {
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-}
-.subscription__input {
-  background-color: transparent;
-  font-family: var(--primary-font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  padding: 15px 16px;
-  letter-spacing: 0.03em;
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-}
-.subscription__input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.subscription__wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.subscription__icon {
-  fill: #FFFFFF;
-  margin-left: 10px;
-}
-
-.button--subscription {
-  display: flex;
-  align-items: center;
-  padding: 10px 28px 10px 29px;
+.footer__link--location .address-block {
+  margin-right: 70px;
 }/*# sourceMappingURL=main.css.map */
