@@ -1,5 +1,15 @@
 // может в navigation ??
 // 0px-767px
+
+.header{
+    padding-top: 16px;
+}
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 @media screen and (max-width:767px){
     .nav{
         display: none;
@@ -20,14 +30,6 @@
 }
 
 
-.header{
-    padding-top: 16px;
-}
-.header__container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 
 
