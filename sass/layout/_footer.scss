@@ -88,12 +88,13 @@
 //     }
 
 
+.container--footer{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width:767px) {
-    .container--footer{
-        text-align: center;
-       margin-left: auto;
-       margin-right: auto;
-    }
 
     .social-block{
         margin-top: 60px;
@@ -105,11 +106,51 @@
 @media screen and (min-width:768px) {
     .container--footer{
         display: flex;
-        align-self: baseline;
-        
+        justify-content: space-around;
+        flex-wrap: wrap;
+         
     }
+    .social-block{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .subscription{
+        margin-top: 60px;
+    }
+    
+    .subscription__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+
 }
 
+@media screen and (min-width:1200px) {
+    .container--footer{
+        display: flex;
+        align-items: baseline;
+        text-align: left;
+    }
+    .subscription{
+        margin-top: 0px;
+        margin-left: auto;
+    }
+    .address-block{
+        margin-right: 70px;
+    }
+    .subscription__input{
+        width: 358px;
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
+    .subscription__wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: baseline;
+    } 
+}
 
 
 // для 1200рх

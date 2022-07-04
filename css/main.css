@@ -683,15 +683,9 @@ body {
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: #C4C4C4;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/img-hero-mobile.jpg");
   margin: 0 auto;
   background-size: cover;
   max-width: 480px;
-}
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/img-hero-mobile@2x.jpg");
-  }
 }
 
 .hero__title {
@@ -701,23 +695,33 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #FFFFFF;
-  font-size: 26px;
-  line-height: 1.62;
 }
 
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/img-hero-mobile.jpg");
+  }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero/img-hero-mobile@2x.jpg");
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     height: 400px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/img-hero-tablet.jpg");
+    background-image: url("../images/hero/img-hero-tablet.jpg");
     max-width: 768px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/img-hero-tablet@2x.jpg");
+    background-image: url("../images/hero/img-hero-tablet@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -725,13 +729,13 @@ body {
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/img-hero-desktop.jpg");
+    background-image: url("../images/hero/img-hero-desktop.jpg");
     max-width: 1600px;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/img-hero-desktop@2x.jpg");
+    background-image: url("../images/hero/img-hero-desktop@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -924,13 +928,13 @@ body {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 767px) {
-  .container--footer {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.container--footer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+@media screen and (max-width: 767px) {
   .social-block {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -939,13 +943,54 @@ body {
 @media screen and (min-width: 768px) {
   .container--footer {
     display: flex;
-    align-self: baseline;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .social-block {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .subscription {
+    margin-top: 60px;
+  }
+
+  .subscription__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
   }
 }
-.subscription {
-  align-self: center;
-}
+@media screen and (min-width: 1200px) {
+  .container--footer {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+  }
 
+  .subscription {
+    margin-top: 0px;
+    margin-left: auto;
+  }
+
+  .address-block {
+    margin-right: 70px;
+  }
+
+  .subscription__input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+
+  .subscription__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: baseline;
+  }
+}
 .subscription__input {
   background-color: transparent;
   font-family: var(--primary-font-family);
@@ -969,5 +1014,9 @@ body {
 }
 
 .button--subscription {
+  display: flex;
+  align-items: center;
   padding: 10px 28px 10px 29px;
+  margin-left: auto;
+  margin-right: auto;
 }/*# sourceMappingURL=main.css.map */
