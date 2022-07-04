@@ -17,3 +17,9 @@
     background: rgba(47, 48, 58, 0.8);
     margin-bottom: 0;
 }
+
+@media screen and(max-width:1199px) {
+    .section--no-padding-top{
+        display: none;
+    } 
+}

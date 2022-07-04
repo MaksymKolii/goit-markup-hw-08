@@ -14,48 +14,104 @@
   <body>
   <!--Header-->
   <header class="header">
-    <div class="container header__container">
-      <!--page navigation-->
-      <nav class="navigation">
-        <a href="#" lang="en" class="logo header__logo">Web<span class="logo__dark">Studio</span></a>
-        <ul class="nav">
-          <li class="nav__item">
-            <a class="nav__link " href="./index.html">Студия</a>
+    <header class="header">
+      <div class="container header__container">
+        <nav class="navigation">
+          <a href="#" lang="en" class="logo header__logo">Web<span class="logo__dark">Studio</span></a>
+          <ul class="nav">
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html">Студия</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <!--contacts info -->
+        <ul class="contacts header__contacts">
+          <li class="contacts__item">
+            <a class="contacts__link" href="mailto:info@devstudio.com">
+              <svg class="contacts__icon" width="16" height="12">
+                <use href="./images/icons.svg/sprite.svg#envelope"></use></svg
+              >info@devstudio.com
+            </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--active" href="./portfolio.html">Портфолио</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Контакты</a>
+          <li class="contacts__item">
+            <a class="contacts__link" href="tel:+380961111111">
+              <svg class="contacts__icon" width="10" height="16">
+                <use href="./images/icons.svg/sprite.svg#smartphone"></use></svg
+              >+38 096 111 11 11</a
+            >
           </li>
         </ul>
-      </nav>
-      <!--contacts info -->
-      <ul class="contacts header__contacts">
-        <li class="contacts__item">
-          <a class="contacts__link" href="mailto:info@devstudio.com">
-            <svg class="contacts__icon" width="16" height="12">
-              <use href="./images/icons.svg/sprite.svg#envelope"></use></svg
-            >info@devstudio.com
-          </a>
-        </li>
-        <li class="contacts__item">
-          <a class="contacts__link" href="tel:+380961111111">
-            <svg class="contacts__icon" width="10" height="16">
-              <use href="./images/icons.svg/sprite.svg#smartphone"></use></svg
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
-    </div>
-  </header>
+        <button type='button'class="mobile-menu-open-btn" data-menu-open>
+          <svg class="mobile-menu-open-btn__icon" width="40" height="40">
+            <use href="./images/icons.svg/sprite.svg#burger"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- === Mobile menu === -->
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/icons.svg/sprite.svg#close-icon"></use>
+            </svg>
+          </button>
+            <ul class="mobile-menu-nav">
+              <li class="mobile-menu-nav__item">
+                <a class="mobile-menu-nav__link nav__link--active" href="./index.html">Студия</a>
+              </li>
+              <li class="mobile-menu-nav__item">
+                <a class="mobile-menu-nav__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mobile-menu-nav__item">
+                <a class="mobile-menu-nav__link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <!-- <div class=" mobile-menu__bottom-block"> -->
+              <ul class="mobile-menu-contacts">
+                <li class="mobile-menu-contacts__item">
+                  <a class="mobile-menu-contacts__link mobile-menu-contacts__link--marked" href="tel:+380961111111">
+                    +38 096 111 11 11</a>
+                </li>
+                <li class="mobile-menu-contacts__item">
+                  <a class="mobile-menu-contacts__link" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="mobile-menu-social-list">
+                <li class="mobile-menu-social-list__item">
+                  <a href="" class="mobile-menu-social-list__link">instagramm 
+                  </a>
+                </li>
+                <li class="mobile-menu-social-list__item">
+                  <a href="" class="mobile-menu-social-list__link">Twitter
+                  </a>
+                </li>
+                <li class="mobile-menu-social-list__item">
+                  <a href="" class="mobile-menu-social-list__link">Facebook
+                  </a>
+                </li>
+                <li class="mobile-menu-social-list__item">
+                  <a href="" class="mobile-menu-social-list__link">LinkedIn
+                  </a>
+                </li>
+              </ul>
+        </div>
+      </div>
+    </header>
     <!-- MAIN SECTION -->
     <main>
       <!-- Section filtr -->
       <section class="section">
         <div class="container">
           <h1 class="visually-hidden">Filter</h1>
-          <!-- <ul class="filter">
+          <ul class="filter">
             <li class="filter__item">
               <button class="filter-btn" type="button">Все</button>
             </li>
@@ -71,9 +127,9 @@
             <li class="filter__item">
               <button class="filter-btn" type="button">Маркетинг</button>
             </li>
-          </ul> -->
+          </ul>
           <!-- CONTENT -->
-          <!-- <ul class="content">
+          <ul class="content">
             <li class="content__item">
               <a href="" class="content__link">
                 <div class="content__block">
@@ -471,12 +527,12 @@
               </div>
             </a>
             </li>
-          </ul> -->
+          </ul>
         </div>
       </section>
     </main>
   <!--Footer-->
-  <!-- <footer class="footer">
+  <footer class="footer">
     <div class="container container--footer">
       <div class="address-block">
         <a href="#" class="logo footer__logo">Web<span class="logo__light">Studio</span></a>
@@ -552,6 +608,7 @@
           </div>
         </form> 
     </div>
-  </footer> -->
+  </footer>
+  <script src="./js/menu.js"></script>
   </body>
 </html>
