@@ -4,12 +4,17 @@
     @include font($fw:700,$fs:24px, $lh:28px);
     letter-spacing: $prim-letter-spacing;
     color: $accent-color;
-    padding: 16px 0 ;
     .logo__dark{
         color: $logo-dark-color;
     } 
     .logo__light{
         color: $white-color; 
+    }
+}
+
+@media screen and (min-width:768px){
+    .logo{
+        padding: 26px 0;
     }
 }
 

@@ -1,13 +1,11 @@
-// может в navigation ??
-// 0px-767px
 
-.header{
-    padding-top: 16px;
-}
 .header__container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $header-border-color;
 }
 
 @media screen and (max-width:767px){
@@ -16,6 +14,14 @@
     }
     .contacts{
         display: none;
+    }
+    .header__container{
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    .header__container{
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
     .mobile-menu-open-btn{
         border: none;
@@ -28,8 +34,6 @@
     }
 
 }
-
-
 
 
 
@@ -59,30 +63,3 @@
 
 
 
-// .header{
-//     border-bottom-width: 1px;
-//     border-bottom-style: solid;
-//     border-bottom-color: $header-border-color;
-
-//     &__container{
-//         display: flex;
-//         align-items: center;
-//     }
-//     &__contacts{
-//         display: flex;
-//         margin-left: auto;
-//     }
-// }
-
-// .header{
-//     border-bottom-width: 1px;
-//     border-bottom-style: solid;
-//     border-bottom-color: $header-border-color;
-
-//     &__container{
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         min-width: 60px;
-//     }
-// }

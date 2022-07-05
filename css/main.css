@@ -207,7 +207,6 @@ body {
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: #2196F3;
-  padding: 16px 0;
 }
 .logo .logo__dark {
   color: #000000;
@@ -216,6 +215,11 @@ body {
   color: #FFFFFF;
 }
 
+@media screen and (min-width: 768px) {
+  .logo {
+    padding: 26px 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .logo {
     font-weight: 700;
@@ -633,14 +637,13 @@ body {
     margin-bottom: 60px;
   }
 }
-.header {
-  padding-top: 16px;
-}
-
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ECECEC;
 }
 
 @media screen and (max-width: 767px) {
@@ -650,6 +653,16 @@ body {
 
   .contacts {
     display: none;
+  }
+
+  .header__container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .header__container {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .mobile-menu-open-btn {
