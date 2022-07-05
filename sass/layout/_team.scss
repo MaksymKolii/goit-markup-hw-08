@@ -4,7 +4,7 @@
     background: $white-color;
     box-shadow: $team-box-shadow;
     border-radius: 0px 0px 4px 4px;
-    margin-bottom: 30px;
+   
 
 }
 
@@ -30,6 +30,12 @@
     margin-bottom: 16px;
 }
 
+@media screen and(max-width: 767px){
+    .team__item:not(:last-child){
+        margin-bottom: 30px;
+    }
+}
+
 @media screen and(min-width: 768px) {
     .team{
     display: flex;
@@ -45,6 +51,17 @@
     }
 }
 
+@media screen and(max-width: 1200px){
+    .section__title{
+        
+        font-family: $primary-font-family;
+        font-weight: $secondary-font;
+        font-size: 28px;
+        line-height: 1.18;
+        margin-bottom: 30px;
+    }
+
+}
 @media screen and(min-width: 1200px){
     .team__item{
         flex-basis: calc((100% - 120px) / 4);

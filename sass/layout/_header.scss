@@ -1,11 +1,14 @@
 
+.header{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $header-border-color;
+}
 .header__container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: $header-border-color;
+   
 }
 
 @media screen and (max-width:767px){
@@ -14,10 +17,6 @@
     }
     .contacts{
         display: none;
-    }
-    .header__container{
-        padding-top: 16px;
-        padding-bottom: 16px;
     }
     .header__container{
         padding-top: 16px;
@@ -59,6 +58,7 @@
         align-items: center;
         margin-left: auto;
     }
+    
 }
 
 
