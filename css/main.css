@@ -504,6 +504,10 @@ body {
 
   .mobile-menu__container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     padding-top: 48px;
     padding-bottom: 48px;
     padding-left: 40px;
@@ -536,10 +540,6 @@ body {
     width: 2px;
     height: 100%;
     background-color: rgba(33, 33, 33, 0.2);
-  }
-
-  .mobile-menu-contacts {
-    margin-top: 302px;
   }
 
   .mobile-menu-contacts__link {
