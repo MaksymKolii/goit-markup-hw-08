@@ -77,6 +77,7 @@
     
 .mobile-menu-social-list{
     margin-top: 65px;
+
     justify-content: flex-start;
 }
 .mobile-menu-social-list__link{
@@ -121,6 +122,9 @@
         visibility: hidden;
         pointer-events: none;
     }
+    .nav__link--active::after{
+        display: none;
+    }
     
     // .mobile-menu.is-open {
     //     opacity: 1;
@@ -155,8 +159,6 @@
     // }
 
 }
-
-
 
 @media screen and (min-width:768px){
     .mobile-menu{
