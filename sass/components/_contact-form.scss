@@ -37,7 +37,6 @@
 
     .contact-form__topic{
         font-family: $primary-font-family;
-        @include font($fw:700,$fs:20px, $lh:23px);
         text-align: center;
         letter-spacing: $prim-letter-spacing;
         color: $heading-text-color;
@@ -57,6 +56,22 @@
         fill: $accent-color;
      }
 }
+
+@media screen and(max-width:1199px){
+    .contact-form__topic{
+        @include font($fw:700,$fs:20px, $lh:30px);
+    }
+   
+}
+
+@media screen and(min-width:1200px){
+    .contact-form__topic{
+        @include font($fw:700,$fs:20px, $lh:23px);
+    }
+    
+}
+
+
 
 .contact-form__message{
     display: block;
