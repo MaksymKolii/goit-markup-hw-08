@@ -699,10 +699,6 @@ body {
     padding-bottom: 16px;
   }
 
-  .mobile-menu-open-btn__icon {
-    fill: #000000;
-  }
-
   .mobile-menu-open-btn {
     border: none;
     padding: 0;

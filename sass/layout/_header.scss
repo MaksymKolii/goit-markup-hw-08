@@ -11,6 +11,10 @@
    
 }
 
+// .mobile-menu-open-btn__icon{
+//     fill: $logo-dark-color; 
+// }
+
 @media screen and (max-width:767px){
     .nav{
         display: none;
@@ -22,9 +26,11 @@
         padding-top: 16px;
         padding-bottom: 16px;
     }
-    .mobile-menu-open-btn__icon{
-        fill: $logo-dark-color; 
-    }
+
+    // .mobile-menu-open-btn__icon{
+    //     fill: $logo-dark-color; 
+    // }
+
     .mobile-menu-open-btn{
         border: none;
         padding: 0;
