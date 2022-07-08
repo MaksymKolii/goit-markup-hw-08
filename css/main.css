@@ -1156,6 +1156,14 @@ body {
     flex-direction: column;
     justify-items: center;
   }
+
+  .subscription__input {
+    width: 450px;
+  }
+
+  .subscription {
+    margin-top: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .container--footer {
