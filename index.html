@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- =============== Animation    https://github.com/michalsnik/aos   1 step ==========-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+     <!-- ======== SLICK https://kenwheeler.github.io/slick/ 2 step взято с гита ===============-->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -177,7 +186,7 @@
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="work">
-            <li class="work__item">
+            <li class="work__item" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
               <picture>
                 <source 
                   srcset="./images/work/desktop-apps.webp 1x, ./images/work/desktop-apps@2x.webp 2x"
@@ -195,7 +204,7 @@
               </picture>
               <h3 class="work__title">Десктопные приложения</h3>
             </li>
-            <li class="work__item">
+            <li class="work__item" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
               <picture>
                 <source 
                   srcset="./images/work/mobile-apps.webp 1x, ./images/work/mobile-apps@2x.webp 2x"
@@ -213,7 +222,7 @@
               </picture>
               <h3 class="work__title">Мобильные приложения</h3>
             </li>
-            <li class="work__item">
+            <li class="work__item" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
               <picture>
                 <source 
                   srcset="./images/work/design-solutions.webp 1x, ./images/work/design-solutions@2x.webp 2x"
@@ -239,7 +248,7 @@
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
-            <li class="team__item">
+            <li class="team__item" data-aos="zoom-in">
               <picture>
                 <source 
                   srcset="./images/team/demian-desktop.webp 1x, ./images/team/demian-desktop@2x.webp 2x"
@@ -308,7 +317,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item">
+            <li class="team__item" data-aos="zoom-in">
               <picture>
                 <source 
                   srcset="./images/team/repina-desktop.webp 1x, ./images/team/repina-desktop@2x.webp 2x"
@@ -377,7 +386,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item">
+            <li class="team__item" data-aos="zoom-in">
               <picture>
                 <source 
                   srcset="./images/team/tarasov-desktop.webp 1x, ./images/team/tarasov-desktop@2x.webp 2x"
@@ -446,7 +455,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item">
+            <li class="team__item" data-aos="zoom-in">
               <picture>
                 <source 
                   srcset="./images/team/ermakov-desktop.webp 1x, ./images/team/ermakov-desktop@2x.webp 2x"
@@ -720,6 +729,35 @@
       </div>
     </div>
     <!-- ========= Scripts ============================== -->
+    <!-- Animation    https://github.com/michalsnik/aos   2 step-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({
+      duration: 700, // values from 0 to 3000, with step 50ms
+      mirror: false, 
+    });
+    </script>
+
+    <!--  SLICK https://kenwheeler.github.io/slick/ 1 step-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!--  SLICK https://kenwheeler.github.io/slick/ 3 step взято с гита-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- ======== Вставляю в script то . что выбрал из https://kenwheeler.github.io/slick/   и вставляем  наш класс от списка в скобки ==== -->
+    <!-- ====== было   $('.multiple-items').slick  стало  $('.clients').slick-->
+    <script>
+      $('.clients').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+    </script>
+
+
+    <!-- ==== BODY SCROLL ============================ -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
     crossorigin="anonymous"></script>
