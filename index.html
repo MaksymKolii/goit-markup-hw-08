@@ -52,7 +52,7 @@
             >
           </li>
         </ul>
-        <button type='button' class="mobile-menu-open-btn" data-menu-open>
+        <button type='button' class="mobile-menu-open-btn js-open-menu" data-menu-open>
           <svg class="mobile-menu-open-btn__icon" width="24" height="16">
             <use href="./images/icons.svg/sprite.svg#burger"></use>
           </svg>
@@ -60,8 +60,9 @@
       </div>
       <!-- === Mobile menu === -->
       <div class="mobile-menu" data-menu>
-        <div class="container mobile-menu__container">
-          <button type="button" class="mobile-menu__close-btn" data-menu-close>
+        <div class="container mobile-menu__container  js-menu-container">
+          <button type="button" class="mobile-menu__close-btn js-close-menu" 
+          aria-label="Кнопка закрытия мобильного меню" data-menu-close >
             <svg class="mobile-menu__close-icon" width="19" height="19">
               <use href="./images/icons.svg/sprite.svg#close-icon"></use>
             </svg>
@@ -718,7 +719,11 @@
         </form>
       </div>
     </div>
-    <script src="./js/menu.js"></script>
+    <!-- ========= Scripts ============================== -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
